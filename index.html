@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"/>
+</head>
+<body>
+    <div id="autocomplete"></div>
+    <script>
+        import { autocomplete } from '@algolia/autocomplete-js';
+
+        import '@algolia/autocomplete-theme-classic';
+
+        getSources() {
+    return [
+      {
+        sourceId: 'links',
+        getItems() {
+          return [
+            { label: 'Twitter', url: 'https://twitter.com' },
+            { label: 'GitHub', url: 'https://github.com' },
+          ];
+        },
+        getItemUrl({ item }) {
+          return item.url;
+        },
+        // ...
+      },
+    ];
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+</body>
+</html>
