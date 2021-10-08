@@ -8,30 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"/>
 </head>
 <body>
-    <div id="autocomplete"></div>
-    <script>
-        import { autocomplete } from '@algolia/autocomplete-js';
-
-        import '@algolia/autocomplete-theme-classic';
-
-        getSources() {
-    return [
-      {
-        sourceId: 'links',
-        getItems() {
-          return [
-            { label: 'Twitter', url: 'https://twitter.com' },
-            { label: 'GitHub', url: 'https://github.com' },
-          ];
-        },
-        getItemUrl({ item }) {
-          return item.url;
-        },
-        // ...
-      },
-    ];
-    };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+  <div id="docsearch"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha">
+    docsearch({
+      appId: 'BH4D9OD16A',
+      apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+      indexName: 'docsearch',
+  });
+  </script>
 </body>
 </html>
